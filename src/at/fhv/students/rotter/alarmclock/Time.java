@@ -22,9 +22,13 @@ public class Time {
     private int _second;
 
     public Time(){
-        _hour = 0;
-        _minute = 0;
-        _second = 0;
+        this(0,0,0);
+    }
+
+    public Time(int hour, int minute, int second) {
+        _hour = hour;
+        _minute = minute;
+        _second = second;
     }
 
     /**
