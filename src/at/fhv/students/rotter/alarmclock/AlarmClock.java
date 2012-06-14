@@ -18,7 +18,9 @@ public class AlarmClock {
     private Time _alarm;
 
     public AlarmClock() {
-
+        _time = new Time();
+        _alarm = new Time();
+        _state = new DisplayTimeState(this);
     }
 
     /**

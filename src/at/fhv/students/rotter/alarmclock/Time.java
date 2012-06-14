@@ -21,6 +21,12 @@ public class Time {
      */
     private int _second;
 
+    public Time(){
+        _hour = 0;
+        _minute = 0;
+        _second = 0;
+    }
+
     /**
      * Returns the hour
      * @return The hour
@@ -106,5 +112,10 @@ public class Time {
                 assert e1.getMinute() > 59 : "The hour has unexpectedly been higher than 60";
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return _hour+":"+_minute+":"+_second;
     }
 }
