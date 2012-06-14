@@ -122,4 +122,26 @@ public class Time {
     public String toString() {
         return _hour+":"+_minute+":"+_second;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Time)) return false;
+
+        Time time = (Time) o;
+
+        if (_hour != time._hour) return false;
+        if (_minute != time._minute) return false;
+        if (_second != time._second) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = _hour;
+        result = 31 * result + _minute;
+        result = 31 * result + _second;
+        return result;
+    }
 }
